@@ -2,7 +2,17 @@ package com.bridgelabz.AddBook;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class AddressBook {
-ArrayList<Contact> contactBook = new ArrayList<>();
+    private String AddressbookName;
+
+    public String getAddressbookName() {
+        return AddressbookName;
+    }
+
+    public void setAddressbookName(String addressbookName) {
+        AddressbookName = addressbookName;
+    }
+
+    ArrayList<Contact> contactBook = new ArrayList<>();
     public void AddContact(){
         Scanner sc = new Scanner(System.in);
         Contact contact = new Contact();
@@ -98,5 +108,13 @@ ArrayList<Contact> contactBook = new ArrayList<>();
             }
         }
         System.out.println("Contact deleted!!!!");
+    }
+
+    @Override
+    public String toString() {
+        return "AddressBook{" +
+                "AddressbookName='" + AddressbookName + '\'' +
+                ", contactBook=" + contactBook +
+                '}';
     }
 }
