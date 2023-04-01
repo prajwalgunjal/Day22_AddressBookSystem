@@ -86,4 +86,17 @@ ArrayList<Contact> contactBook = new ArrayList<>();
             }
         }
     }
+    public void delete(){
+        System.out.println("Enter name of the contact which you want to delete: ");
+        Scanner sc = new Scanner(System.in);
+        String name = sc.next();
+        for(int i=0;i<contactBook.size();i++) {
+            Contact contact =contactBook.get(i);
+            if(contact.getFirstName().equals(name))
+            {
+                contactBook.remove(contact);
+            }
+        }
+        System.out.println("Contact deleted!!!!");
+    }
 }
